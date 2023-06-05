@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the Word</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Devine le mot - Version animal</h1>
+    <p id="word"></p>
+    <input type="text" id="guess" placeholder="Entrez une lettre ou un mot">
+    <button onclick="checkGuess()">Vérifier</button>
+    <p id="message"></p>
+    <p id="tries"></p>
+    <button id="refresh" onclick="document.location.reload()">Réessayer</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
