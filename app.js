@@ -5,8 +5,6 @@ const guessInput = document.getElementById("guess");
 const messageElement = document.getElementById("message");
 const triesElement = document.getElementById("tries");
 
-console.log(words);
-
 let guessedLetters = [];
 let remainingTries = 15;
 
@@ -36,6 +34,14 @@ function checkGuess() {
 
     if (selectedWord.includes(guess)) {
       messageElement.textContent = "La lettre est présente dans le mot !";
+
+      const allLettersGuessed = selectedWord.split("").every(letter => guessedLetters.includes(letter));
+
+      if (allLettersGuessed) {
+        guessInput.disabled = true;
+        guessedLetters = selectedWord.split("");
+        messageElement.textContent = "Bravo, tu as deviné le mot correctement !";
+      }
     } else {
       messageElement.textContent = "La lettre n'est pas dans le mot. Essaie encore !";
       remainingTries--;
