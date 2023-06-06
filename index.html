@@ -15,8 +15,10 @@
   <div class="container">
     <h1>Devine le mot - Version animal</h1>
     <p id="word"></p>
-    <input type="text" id="guess" placeholder="Entrez une lettre ou un mot">
-    <button onclick="checkGuess()">Vérifier</button>
+    <form onsubmit="event.preventDefault(); checkGuess();">
+      <input type="text" id="guess" placeholder="Entrez une lettre ou un mot" autocomplete="off">
+      <button type="submit">Vérifier</button>
+    </form>
     <p id="message"></p>
     <p id="tries"></p>
     <button id="refresh" onclick="document.location.reload()">Réessayer</button>
