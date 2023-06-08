@@ -1,5 +1,7 @@
 body{
     overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
 }
 .container {
     height: 100%;
@@ -15,18 +17,37 @@ body{
 
 h1 {
     font-size: 24px;
-    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Open Sans', sans-serif;
 }
 
 input[type="text"] {
     padding: 5px;
     width: 200px;
     margin-top: 10px;
+    border: solid 3px aliceblue;
+    border-radius: 10px;
+    transition: all ease-in-out .3s;
+}
+
+input[type="text"]:focus {
+    border-color:rgb(164, 210, 251);
+    outline: none;
+    transition: all ease-in-out .3s;
 }
 
 button {
     padding: 10px 20px;
     margin-top: 10px;
+    border: none;
+    background-color: aliceblue;
+    border-radius: 10px;
+    transition: all ease-in-out .3s;
+    color: #333333;
+}
+
+button:hover{
+    background-color: rgb(164, 210, 251);
+    transition: all ease-in-out .3s;
 }
 
 p#message {
@@ -36,4 +57,10 @@ p#message {
 
 p#tries {
     margin-top: 10px;
+}
+
+#footer p{
+    position: absolute;
+    top: 90%;
+    opacity: 0.8;
 }
