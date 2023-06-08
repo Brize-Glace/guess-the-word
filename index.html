@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guess the Word</title>
+  <title>Devine le mot!</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,15 +17,12 @@
     <p id="word"></p>
     <form onsubmit="event.preventDefault(); checkGuess();">
       <input type="text" id="guess" placeholder="Entrez une lettre ou un mot" autocomplete="off">
+      <br>
       <button type="submit">Vérifier</button>
     </form>
     <p id="message"></p>
     <p id="tries"></p>
     <button id="refresh" onclick="document.location.reload()">Réessayer</button>
-  </div>
-
-  <div id="footer">
-    <p>&copy; 2023 Brize Glace;  BSD 2-Clause "Simplified" License</p>
   </div>
 
   <script src="words.js"></script>
@@ -34,3 +31,4 @@
 </body>
 
 </html>
+
