@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devine le mot!</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="verify">
+      <h1>Verification</h1>
+      <form id="codeForm">
+        <input type="password" id="codeAnim" placeholder="Code animateur" autocomplete="off">
+        <br>
+        <button type="submit" id="confirm_button">Vérifier</button>
+      </form>
+      <p id="messageCode"></p>
+    </div>
+  <div class="container">
+    <h1>Devine le mot</h1>
+    <p id="word"></p>
+    <form onsubmit="event.preventDefault(); checkGuess();">
+      <input type="text" id="guess" placeholder="Entrez une lettre ou un mot" autocomplete="off">
+      <br>
+      <button type="submit">Vérifier</button>
+    </form>
+    <p id="message"></p>
+    <p id="tries"></p>
+    <button id="refresh" onclick="document.location.reload()">Réessayer</button>
+  </div>
+
+  <script src="words.js"></script>
+  <script src="app.js"></script>
+  <script src="check.js"></script>
+
+</body>
+
+</html>
+
